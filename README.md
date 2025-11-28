@@ -49,3 +49,40 @@ ArrayLinkedList/
 │   └── main.cpp         # Demo / timing harness
 ├── CMakeLists.txt
 └── test_lab.cpp         # Unit tests
+
+----
+
+Build Instructions:
+# From the repo root
+mkdir -p build
+cd build
+
+cmake ..
+make
+
+After a successful build, binaries will be located in build/bin.
+
+Running:
+From inside build/bin
+
+# Run the main program with timing / demo
+./ArrayLinkedList
+
+# Run unit tests
+./ArrayLinkedListTests
+
+
+Implementation Notes
+
+BalancedList is implemented as a single linear chain of nodes (no extra trees or skip lists).
+Each node wraps an ArrayList:
+When a node becomes full, it is split:
+A new node is created
+Some elements are moved into the new node
+Pointers are updated and the new element is inserted
+The design goal is to balance the work of:
+Index-based access
+Insertions at arbitrary positions
+Deletes at arbitrary positions
+
+
