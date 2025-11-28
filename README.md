@@ -1,5 +1,3 @@
-# BalancedList
-
 # BalancedList – Unrolled Linked List with Optimized Operations
 
 This project implements three linear data structures in C++:
